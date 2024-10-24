@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타로 소울카드 찾기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            max-width: 600px; /* 컨테이너 폭 제한 */
+            margin: 0 auto; /* 가운데 정렬 */
+        }
+        input, button {
+            padding: 12px 20px; /* 모바일에서 클릭하기 쉽게 여백 증가 */
+            margin: 10px;
+            font-size: 1.2em; /* 폰트 크기 확대 */
+        }
+        h1 {
+            font-size: 2em; /* 제목 크기 조정 */
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.2em;
+        }
+        /* 반응형 디자인: 모바일 화면에서 폰트 크기 및 레이아웃 조정 */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            input, button {
+                width: 100%; /* 버튼과 입력 필드를 화면 전체 너비로 확장 */
+                box-sizing: border-box; /* 입력 필드와 버튼의 여백을 포함한 전체 너비 계산 */
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2, h3 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>타로 소울카드를 찾아보세요!</h1>
+
+    <!-- 양력 생일 입력 -->
+    <p>[양력] 생년월일을 입력하세요:</p>
+    <input type="date" id="solarBirthday" />
+    <button id="findSolarSoulCardButton">양력 소울카드 찾기</button>
+
+    <!-- 음력 생일 입력 -->
+    <p>[음력] 생년월일을 입력하세요:</p>
+    <input type="date" id="lunarBirthday" />
+    <button id="findLunarSoulCardButton">음력 소울카드 찾기</button>
+
+    <div id="result"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
